@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation - Explorations Océaniques</title>
+    <link rel="icon" href="images/ico/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/formulaire.css">
+</head>
+<body>
+    <header id="entete"></header>
+    <main class="zonePrincipale">
+        <section class="introFormulaire">
+            <h1>Réservez Votre Plongée</h1>
+            <p>Remplissez le formulaire ci-dessous pour réserver votre aventure sous-marine</p>
+        </section>
+
+        <section class="formulaireSection">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <form id="formReservation" class="formulairePlongee" novalidate>
+                            <div class="mb-4">
+                                <label for="nom" class="form-label">Nom complet <span class="requis">*</span></label>
+                                <input type="text" class="form-control" id="nom" name="nom" required minlength="2">
+                                <div class="invalid-feedback">Veuillez entrer votre nom (minimum 2 caractères).</div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="email" class="form-label">Adresse courriel <span
+                                        class="requis">*</span></label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                                <div class="invalid-feedback">Veuillez entrer une adresse courriel valide.</div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="telephone" class="form-label">Numéro de téléphone <span
+                                        class="requis">*</span></label>
+                                <input type="tel" class="form-control" id="telephone" name="telephone" required
+                                    pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}">
+                                <div class="invalid-feedback">Format attendu: 123-456-7890 ou 1234567890</div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="dateNaissance" class="form-label">Date de naissance <span
+                                        class="requis">*</span></label>
+                                <input type="date" class="form-control" id="dateNaissance" name="dateNaissance"
+                                    required>
+                                <div class="invalid-feedback">Veuillez sélectionner votre date de naissance.</div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="datePlongee" class="form-label">Date de plongée souhaitée <span
+                                        class="requis">*</span></label>
+                                <input type="date" class="form-control" id="datePlongee" name="datePlongee" required>
+                                <div class="invalid-feedback">Veuillez choisir une date de plongée.</div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="typePlongee" class="form-label">Type de plongée <span
+                                        class="requis">*</span></label>
+                                <select class="form-select" id="typePlongee" name="typePlongee" required>
+                                    <option value="">-- Choisir un type --</option>
+                                    <option value="debutant">Initiation (0-20m)</option>
+                                    <option value="intermediaire">Intermédiaire (20-40m)</option>
+                                    <option value="avance">Avancé (40-60m)</option>
+                                    <option value="profond">Profondeur extrême (60m+)</option>
+                                </select>
+                                <div class="invalid-feedback">Veuillez sélectionner un type de plongée.</div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label">Intérêts particuliers</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="interetBaleines" name="interets"
+                                        value="baleines">
+                                    <label class="form-check-label" for="interetBaleines">Observer les baleines</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="interetRequins" name="interets"
+                                        value="requins">
+                                    <label class="form-check-label" for="interetRequins">Nager avec les requins</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="interetCoraux" name="interets"
+                                        value="coraux">
+                                    <label class="form-check-label" for="interetCoraux">Explorer les récifs
+                                        coralliens</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="interetPhotographie"
+                                        name="interets" value="photographie">
+                                    <label class="form-check-label" for="interetPhotographie">Photographie
+                                        sous-marine</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="experience" class="form-label">Niveau d'expérience</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="experience" id="expAucune"
+                                            value="aucune" checked>
+                                        <label class="form-check-label" for="expAucune">Aucune</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="experience" id="expDebutant"
+                                            value="debutant">
+                                        <label class="form-check-label" for="expDebutant">Débutant</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="experience"
+                                            id="expIntermediaire" value="intermediaire">
+                                        <label class="form-check-label" for="expIntermediaire">Intermédiaire</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="experience" id="expAvance"
+                                            value="avance">
+                                        <label class="form-check-label" for="expAvance">Avancé</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="commentaires" class="form-label">Commentaires ou demandes spéciales</label>
+                                <textarea class="form-control" id="commentaires" name="commentaires" rows="4"
+                                    placeholder="Parlez-nous de vos attentes..."></textarea>
+                            </div>
+
+                            <div class="alert alert-info" role="alert">
+                                <strong>📋 Note:</strong> Tous les champs marqués d'un astérisque (*) sont obligatoires.
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Soumettre la Réservation</button>
+                        </form>
+
+                        <div id="confirmationMessage" class="confirmationMsg"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="piedPage"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/formulaire.js"></script>
+</body>
+
+</html>

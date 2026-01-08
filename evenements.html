@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements - Explorations Océaniques</title>
+    <link rel="icon" href="images/ico/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/evenements.css">
+</head>
+<body>
+    <header id="entete"></header>
+    <div id="ocean"></div>
+    <main class="zonePrincipale">
+        <section class="introEvenements">
+            <h1>Événements Interactifs</h1>
+            <p>Découvrez nos activités interactives pour en apprendre davantage sur les océans</p>
+        </section>
+
+        <section class="conteneurEvenements">
+            <article class="evenement" id="evt1">
+                <h2>1. Compteur de Clics - Contrôle des Vagues</h2>
+                <p>Cliquez sur le bouton pour créer des vagues et augmenter leur vitesse!</p>
+                <button id="btnCompteur" class="btn-event">Créer une Vague</button>
+                <p id="resultatCompteur" class="resultat">Vagues créées: 0</p>
+            </article>
+
+            <article class="evenement" id="evt2">
+                <h2>2. Sélecteur d'Animaux</h2>
+                <p>Choisissez un animal marin pour le voir dans l'océan:</p>
+                <select id="selectAnimal" class="selectionAnimal">
+                    <option value="">-- Choisir un animal --</option>
+                    <option value="baleine">Baleine Bleue</option>
+                    <option value="requin">Grand Requin Blanc</option>
+                    <option value="dauphin">Dauphin</option>
+                    <option value="tortue">Tortue de Mer</option>
+                    <option value="poisson-rouge">Poisson Rouge</option>
+                </select>
+            </article>
+
+            <article class="evenement" id="evt3">
+                <h2>3. Changeur de Couleur</h2>
+                <p>Survolez les bulles pour les voir changer de couleur!</p>
+                <div class="conteneurBulles">
+                    <div class="bulle"></div>
+                    <div class="bulle"></div>
+                    <div class="bulle"></div>
+                    <div class="bulle"></div>
+                    <div class="bulle"></div>
+                </div>
+            </article>
+
+            <article class="evenement" id="evt4">
+                <h2>4. Profondeur de Plongée</h2>
+                <p>Entrez une profondeur (en mètres) pour explorer différentes zones océaniques et voir l'eau
+                    s'assombrir:</p>
+                <input type="number" id="inputProfondeur" class="inputProf" placeholder="Ex: 500" min="0" max="11000">
+                <button id="btnProfondeur" class="btn-event">Explorer</button>
+                <p id="resultatProfondeur" class="resultat"></p>
+            </article>
+
+            <article class="evenement" id="evt5">
+                <h2>5. Pêcher du poisson</h2>
+                <p>Double-cliquez sur le fillet pour pecher!</p>
+                <div id="coffre" class="coffre">🎣</div>
+                <p id="resultatCoffre" class="resultat"></p>
+            </article>
+        </section>
+    </main>
+    <div id="surfaceVagues"></div>
+    <footer id="piedPage"></footer>
+    <script src="js/index.js"></script>
+    <script src="js/evenements.js"></script>
+</body>
+
+</html>
