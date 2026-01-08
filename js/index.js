@@ -13,12 +13,12 @@ function creerEntete() {
     
     entete.innerHTML = `
         <div class="enteteContenu">
-            <a href="accueil.html" class="lienLogo">
+            <a href="index.html" class="lienLogo">
                 ${logoSVG}
             </a>
             <nav>
                 <ul>
-                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="index.html">Accueil</a></li>
                     <li><a href="evenements.html">Événements</a></li>
                     <li><a href="formulaire.html">Réservation</a></li>
                 </ul>
